@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #121212;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.container {
+  margin-top: 100px;
+}
+
+#artist {
+  padding: 10px;
+  width: 250px;
+  background: #333;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+#searchButton {
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#searchButton:hover {
+  background: #0056b3;
+}
+
+#results {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#results li {
+  margin: 10px 0;
+  background: #333;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#error {
+  color: #ff4c4c;
+  padding: 0;
+}
+
+.highlight {
+  color: #ff0;
+  font-style: italic;
+}

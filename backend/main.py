@@ -1,7 +1,17 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from spotify_api import get_artist_song, search_artist_song
 
 app = FastAPI()
+
+# CORS 설정
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def home():
@@ -13,5 +23,4 @@ def artist(artist_name: str):
 
 @app.get("/search")
 def search(artist: str):
-    result = search_artist_song(artist)
-    return result
+    return search_artist_song(artist)
