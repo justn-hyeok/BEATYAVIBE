@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from spotify_api import get_artist_song, search_artist_song
+from mangum import Mangum
+import os
 
 app = FastAPI()
 
@@ -13,9 +16,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
+@app.get("/", response_class=FileResponse)
 def home():
-    return {"message": "Welcome to Spotify Music Recommendation API"}
+    # ../frontend/index.html 파일 경로
+    file_path = os.path.join(os.path.dirname(__file__), '../frontend/index.html')
+    return FileResponse(file_path)
 
 @app.get("/artist")
 def artist(artist_name: str):
