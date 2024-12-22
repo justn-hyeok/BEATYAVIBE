@@ -1,0 +1,30 @@
+# Byte-compiled 파일
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# 로그 파일
+*.log
+
+# 환경 변수 파일
+.env
+
+# 가상환경
+venv/
+env/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Linux
+*~
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
