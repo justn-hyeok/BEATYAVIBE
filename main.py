@@ -19,7 +19,7 @@ app.add_middleware(
 @app.get("/", response_class=FileResponse)
 def home():
     # ../frontend/index.html 파일 경로
-    file_path = os.path.join(os.path.dirname(__file__), '../frontend/index.html')
+    file_path = os.path.join(os.path.dirname(__file__), './index.html')
     return FileResponse(file_path)
 
 @app.get("/artist")
