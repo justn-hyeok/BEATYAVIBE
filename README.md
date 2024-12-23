@@ -49,7 +49,7 @@ uvicorn backend.main:app --reload
 
 ## 파일 구조
 
-<img src="image-1.png" alt="파일 구조" width="200px">
+<img src="image.png" alt="파일 구조" width="200px">
 
 ## 만든 사람
 - [HWANG JUN HYEOK](https://www.instagram.com/wnsgurjh_/)
